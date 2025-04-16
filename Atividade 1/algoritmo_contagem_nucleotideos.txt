@@ -1,0 +1,38 @@
+## Algoritmo Passo a Passo
+
+### 1. Importação do arquivo FASTA
+- Abrir o arquivo teste1.fasta em modo leitura
+- Ler todas as linhas do arquivo para processamento
+  - A primeira linha contém o cabeçalho com o nome do gene (identificado pelo caractere '>')
+  - A segunda linha contém a sequência de DNA
+
+### 2. Extração das informações
+- Extrair o nome do gene do cabeçalho
+  - Remover o caractere '>' se estiver presente 
+  - Remover espaços em branco extras
+- Extrair a sequência de DNA da segunda linha
+  - Converter todos os caracteres para maiúsculo para padronização
+
+### 3. Contagem de nucleotídeos
+- Inicializar contadores para cada tipo de nucleotídeo (A, C, G, T)
+- Para cada caractere na sequência de DNA:
+  - Verificar qual nucleotídeo é (A, C, G ou T)
+  - Incrementar o contador correspondente
+
+### 4. Cálculo do total
+- Somar os valores de todos os contadores para obter o número total de nucleotídeos
+
+### 5. Geração do resultado
+- Formatar os resultados:
+  - Nome do gene
+  - Quantidade de A
+  - Quantidade de C
+  - Quantidade de G
+  - Quantidade de T
+  - Total de nucleotídeos
+
+### 6. Exibição e armazenamento dos resultados
+- Exibir os resultados no console para visualização imediata
+- Criar um arquivo de saída (resultado_contagem.txt)
+- Escrever os resultados formatados no arquivo
+- Fechar o arquivo
