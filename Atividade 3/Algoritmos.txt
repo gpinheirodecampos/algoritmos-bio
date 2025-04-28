@@ -1,0 +1,78 @@
+A) ALGORITMO NARRATIVO - CÁLCULO DE TEMPERATURA DE MELTING E CONTEÚDO GC
+
+1. Importar bibliotecas necessárias (Biopython, matplotlib, csv, math)
+2. Definir a concentração de sódio como 100 mM
+3. Abrir o arquivo FASTA "Ecoli_Sakai_cds_from_genomic.fna"
+4. Para cada sequência no arquivo FASTA:
+   a. Ler o identificador da sequência (nome do gene)
+   b. Ler a sequência de DNA
+   c. Calcular o número de nucleotídeos A, T, C, G e o total
+   d. Calcular o conteúdo GC = (G + C) / total de nucleotídeos
+   e. Calcular a temperatura de melting usando a fórmula: Tm = 81.5 + 16.6 * log10([Na+]/1000) + 0.41 * (%GC) - 500/comprimento
+   f. Armazenar os resultados
+5. Criar arquivo CSV "Dados das sequencias.csv" contendo o número de A, T, C, G e total para cada sequência
+6. Criar arquivo CSV "Conteudo_GC.csv" contendo o conteúdo GC para cada sequência
+7. Criar arquivo CSV "Temperatura_x_GC.csv" contendo a temperatura de melting e o conteúdo GC em porcentagem para cada sequência
+8. Criar gráfico de dispersão:
+   a. Eixo X: Temperatura de melting
+   b. Eixo Y: Conteúdo GC (%)
+   c. Adicionar rótulos aos eixos
+   d. Adicionar título e subtítulo com nome do autor
+   e. Salvar como imagem
+
+B) ALGORITMO PSEUDOCÓDIGO - CÁLCULO DE TEMPERATURA DE MELTING E CONTEÚDO GC
+
+INÍCIO
+    importar BioPython, matplotlib, csv, math
+    
+    DEFINIR concentracao_sodio = 100 # mM
+    
+    DEFINIR arquivo_entrada = "Ecoli_Sakai_cds_from_genomic.fna"
+    DEFINIR arquivo_saida_dados = "Dados das sequencias.csv"
+    DEFINIR arquivo_saida_gc = "Conteudo_GC.csv"
+    DEFINIR arquivo_saida_temp = "Temperatura_x_GC.csv"
+    DEFINIR arquivo_grafico = "GC_x_Temperatura.png"
+    
+    DEFINIR sequencias = []
+    
+    FUNÇÃO calcular_tm(conteudo_gc, comprimento):
+        RETORNAR 81.5 + 16.6 * log10(concentracao_sodio/1000) + 0.41 * (conteudo_gc*100) - 500/comprimento
+    
+    PARA cada registro EM parse_fasta(arquivo_entrada) FAÇA
+        identificador = registro.id
+        sequencia = registro.seq
+        
+        contador_A = contar(sequencia, 'A')
+        contador_T = contar(sequencia, 'T')
+        contador_C = contar(sequencia, 'C')
+        contador_G = contar(sequencia, 'G')
+        total = contador_A + contador_T + contador_C + contador_G
+        
+        conteudo_gc = (contador_G + contador_C) / total
+        temperatura_melting = calcular_tm(conteudo_gc, total)
+        
+        adicionar_em(sequencias, [identificador, contador_A, contador_T, contador_C, contador_G, total, conteudo_gc, temperatura_melting])
+    FIM PARA
+    
+    # Criação dos arquivos CSV
+    escrever_arquivo_csv(arquivo_saida_dados, ["Sequencia", "A", "T", "C", "G", "Total"], 
+                        [s[0:6] para cada s em sequencias])
+    
+    escrever_arquivo_csv(arquivo_saida_gc, ["Sequencia", "Conteudo GC"], 
+                        [[s[0], s[6]] para cada s em sequencias])
+    
+    escrever_arquivo_csv(arquivo_saida_temp, ["Temperatura de Melting", "Conteudo GC (%)"], 
+                        [[s[7], s[6]*100] para cada s em sequencias])
+    
+    # Criação do gráfico
+    x = [s[7] para cada s em sequencias]  # Temperatura de melting
+    y = [s[6]*100 para cada s em sequencias]  # Conteúdo GC em %
+    
+    criar_grafico_dispersao(x, y)
+    adicionar_rotulo_eixo_x("Temperatura de Melting (°C)")
+    adicionar_rotulo_eixo_y("Conteúdo GC (%)")
+    adicionar_titulo("Relação entre Conteúdo GC e Temperatura de Melting")
+    adicionar_subtitulo("Gabriel Pinheiro de Campos")
+    
+    salvar_grafico(arquivo_grafico)
+FIM
