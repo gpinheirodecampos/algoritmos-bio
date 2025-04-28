@@ -29,9 +29,21 @@ Análise mais avançada do genoma da bactéria *Escherichia coli* O157:H7 Sakai,
 - `Ecoli_Sakai_plasmid1_counts.csv`: Resultados da contagem para o plasmídeo 1
 - `Ecoli_Sakai_plasmid2_counts.csv`: Resultados da contagem para o plasmídeo 2
 
-### Atividade 3
+### Atividade 3: Temperatura de Melting e Conteúdo GC
 
-Em desenvolvimento.
+Análise de sequências de DNA da *Escherichia coli* O157:H7 Sakai para calcular as temperaturas de melting (anelamento) e sua relação com o conteúdo GC.
+
+**Arquivos:**
+- `calculo_temperatura_melting.py`: Script Python para análise das sequências
+- `calculo_temperatura_melting.ipynb`: Notebook Jupyter com análises interativas e visualizações
+- `Algoritmos.txt`: Documentação do algoritmo (narrativo e pseudocódigo)
+- `Ecoli_Sakai_cds_from_genomic.fna`: Arquivo FASTA com 5155 potenciais genes da *E. coli* Sakai
+- `Dados das sequencias.csv`: Resultados da contagem de nucleotídeos
+- `Conteudo_GC.csv`: Resultados da análise do conteúdo GC
+- `Temperatura_x_GC.csv`: Resultados da temperatura de melting e conteúdo GC
+- `GC_x_Temperatura.png`: Gráfico de dispersão mostrando a relação entre conteúdo GC e temperatura de melting
+- `BioMath_Linear Functions Applications.pdf`: Documento com informações sobre o cálculo da temperatura de melting
+- `Figura 1.png`: Imagem de referência para curvas de melting de DNA
 
 ## Sobre a Disciplina
 
@@ -41,8 +53,10 @@ A Unidade Curricular de Algoritmos em Bioinformática aborda o desenvolvimento e
 
 - Python 3
 - BioPython
+- Matplotlib e pandas para visualização de dados
 - Manipulação de arquivos FASTA
 - Análise de sequências genômicas
+- Cálculo de propriedades biofísicas (temperatura de melting, conteúdo GC)
 
 ---
 
