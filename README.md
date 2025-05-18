@@ -45,6 +45,34 @@ Análise de sequências de DNA da *Escherichia coli* O157:H7 Sakai para calcular
 - `BioMath_Linear Functions Applications.pdf`: Documento com informações sobre o cálculo da temperatura de melting
 - `Figura 1.png`: Imagem de referência para curvas de melting de DNA
 
+### Atividade 4: Transcrição e Tradução de Sequências Genômicas
+
+Implementação de algoritmos para a transcrição de DNA para RNA e a tradução de RNA para proteínas, aplicados ao genoma da *Escherichia coli* O157:H7 Sakai.
+
+**Arquivos:**
+- `transcricao_traducao.py`: Script Python para transcrição e tradução de sequências
+- `transcricao_traducao.ipynb`: Notebook Jupyter com processos de transcrição e tradução detalhados
+- `Ecoli_Sakai_cds_from_genomic.fna`: Arquivo FASTA com sequências codificantes da *E. coli* Sakai
+- `Sakai_RNA.fasta`: Sequências de RNA após processo de transcrição
+- `Frame1.fasta` a `Frame6.fasta`: Sequências traduzidas para proteínas em cada um dos seis frames de leitura
+- `Tabela do código genético.png`: Imagem da tabela de código genético utilizada na tradução
+- `Figura 1.png`, `Figura 2.png`, `Figura 3a.png`, `Figura 3b.png`: Imagens referentes ao processo de transcrição e tradução
+
+### Atividade 5: Anotação Genômica - Identificação de ORFs
+
+Desenvolvimento de algoritmo para identificação de regiões potencialmente codificadoras de proteínas (ORFs - Open Reading Frames) no genoma da *Escherichia coli* O157:H7 Sakai, incluindo o genoma principal e os dois plasmídeos.
+
+**Arquivos:**
+- `protein_finder.py`: Script Python para identificação de ORFs nos seis frames de leitura
+- `protein_finder.ipynb`: Notebook Jupyter com implementação detalhada e análise do processo de identificação de ORFs
+- `Ecoli Sakai sequence.fasta`: Sequência do genoma principal da *E. coli* Sakai
+- `Ecoli Sakai Plasmid 1 sequence.fasta`: Sequência do plasmídeo pO157 da *E. coli* Sakai
+- `Ecoli Sakai plasmid 2 sequence.fasta`: Sequência do plasmídeo pOSAK1 da *E. coli* Sakai
+- `gc_frame1_ativ5_156315.fasta` a `gc_frame6_ativ5_156315.fasta`: Potenciais proteínas do genoma principal nos 6 frames
+- `p1_frame1_ativ5_156315.fasta` a `p1_frame6_ativ5_156315.fasta`: Potenciais proteínas do plasmídeo pO157 nos 6 frames
+- `p2_frame1_ativ5_156315.fasta` a `p2_frame6_ativ5_156315.fasta`: Potenciais proteínas do plasmídeo pOSAK1 nos 6 frames
+- `README.md`: Documento detalhando a relação da atividade com o processo de anotação genômica
+
 ## Sobre a Disciplina
 
 A Unidade Curricular de Algoritmos em Bioinformática aborda o desenvolvimento e aplicação de algoritmos computacionais para resolver problemas biológicos, com foco na análise de sequências de DNA, RNA e proteínas. As atividades práticas visam desenvolver habilidades na manipulação e análise de dados biológicos usando linguagens de programação como Python.
