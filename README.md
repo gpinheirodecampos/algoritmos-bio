@@ -45,6 +45,30 @@ Análise de sequências de DNA da *Escherichia coli* O157:H7 Sakai para calcular
 - `BioMath_Linear Functions Applications.pdf`: Documento com informações sobre o cálculo da temperatura de melting
 - `Figura 1.png`: Imagem de referência para curvas de melting de DNA
 
+### Atividade 4: Transcrição e Tradução
+
+Análise dos processos de transcrição e tradução em sequências de *Escherichia coli* O157:H7 Sakai, incluindo a identificação de fases de leitura (reading frames) e tradução em aminoácidos.
+
+**Arquivos:**
+- `transcricao_traducao.py`: Script Python para análise de transcrição e tradução
+- `transcricao_traducao.ipynb`: Notebook Jupyter com análises interativas
+- `Ecoli_Sakai_cds_from_genomic.fna`: Arquivo FASTA com sequências codificantes da *E. coli* Sakai
+- `Sakai_RNA.fasta`: Sequências de RNA transcritas
+- `Frame1.fasta` a `Frame6.fasta`: Sequências traduzidas nas 6 fases de leitura possíveis
+- `Tabela do código genético.png`: Referência do código genético
+- `Figura 1.png`, `Figura 2.png`, `Figura 3a.png`, `Figura 3b.png`: Visualizações dos processos
+
+### Atividade 7: Montagem de Genoma com Algoritmo Guloso
+
+Implementação de um algoritmo guloso para montagem de contigs a partir de reads curtas de DNA, simulando o processo de montagem de genomas.
+
+**Arquivos:**
+- `montagem_genoma.py`: Script Python implementando o algoritmo guloso para montagem de genoma
+- `explicacao_algoritmo_guloso.md`: Documentação detalhada sobre o funcionamento do algoritmo guloso
+- `reads4.fasta`: Arquivo FASTA com 4 reads curtas de DNA para montagem
+- `contig.fasta`: Resultado da montagem - contig final obtido pelo algoritmo guloso
+- `montagem_genoma_notebook.ipynb`: Notebook Jupyter com análises interativas
+
 ## Sobre a Disciplina
 
 A Unidade Curricular de Algoritmos em Bioinformática aborda o desenvolvimento e aplicação de algoritmos computacionais para resolver problemas biológicos, com foco na análise de sequências de DNA, RNA e proteínas. As atividades práticas visam desenvolver habilidades na manipulação e análise de dados biológicos usando linguagens de programação como Python.
@@ -57,6 +81,7 @@ A Unidade Curricular de Algoritmos em Bioinformática aborda o desenvolvimento e
 - Manipulação de arquivos FASTA
 - Análise de sequências genômicas
 - Cálculo de propriedades biofísicas (temperatura de melting, conteúdo GC)
+- Algoritmos gulosos para montagem de genoma
 
 ---
 
