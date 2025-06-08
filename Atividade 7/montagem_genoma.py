@@ -162,11 +162,11 @@ def main():
         
         print()
         print("=" * 60)
-        print("MONTAGEM CONCLUÍDA COM SUCESSO!")
+        print("MONTAGEM CONCLUÍDA COM SUCESSO")
         print("=" * 60)
         
     except FileNotFoundError:
-        print(f"ERRO: Arquivo '{arquivo_entrada}' não encontrado!")
+        print(f"ERRO: Arquivo '{arquivo_entrada}' não encontrado")
     except Exception as e:
         print(f"ERRO: {e}")
 
